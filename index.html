@@ -15,23 +15,34 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #fff; /* White text for better contrast */
         }
+
         #container {
             position: relative;
             width: 100%;
             height: 100%;
         }
+
+        #lebron {
+            position: absolute;
+            bottom: 0;
+            left: 20px;
+            width: 300px; /* Adjust to make it prominent */
+            z-index: 1;
+        }
+
         #thought-bubble {
             position: absolute;
             bottom: 150px;
-            left: 150px;
-            width: 300px;
+            left: 180px;
+            width: 350px;
             padding: 20px;
-            background: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+            background: rgba(255, 255, 255, 0.95); /* Solid with minimal transparency */
             border-radius: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 2;
         }
+
         #thought-bubble:before {
             content: "";
             position: absolute;
@@ -39,9 +50,10 @@
             left: 20px;
             width: 40px;
             height: 40px;
-            background: rgba(255, 255, 255, 0.8);
+            background: rgba(255, 255, 255, 0.95);
             border-radius: 50%;
         }
+
         #thought-bubble:after {
             content: "";
             position: absolute;
@@ -49,19 +61,23 @@
             left: 0px;
             width: 20px;
             height: 20px;
-            background: rgba(255, 255, 255, 0.8);
+            background: rgba(255, 255, 255, 0.95);
             border-radius: 50%;
         }
+
         #chat-box {
-            height: 100px;
+            height: 200px;
             overflow-y: auto;
             margin-bottom: 10px;
+            color: #333; /* Dark text for readability */
         }
+
         #chat-input-container {
             display: flex;
             align-items: center;
             gap: 10px;
         }
+
         #chat-input {
             flex-grow: 1;
             padding: 10px;
@@ -69,6 +85,7 @@
             border: 1px solid #ccc;
             border-radius: 10px;
         }
+
         #send-button {
             padding: 10px 20px;
             font-size: 16px;
@@ -78,6 +95,7 @@
             border-radius: 10px;
             cursor: pointer;
         }
+
         #send-button:hover {
             background-color: #0056b3;
         }
@@ -85,6 +103,10 @@
 </head>
 <body>
     <div id="container">
+        <!-- LeBron Image -->
+        <img id="lebron" src="lebron_image.png" alt="LeBron">
+
+        <!-- Thought Bubble -->
         <div id="thought-bubble">
             <div id="chat-box"></div>
             <div id="chat-input-container">
