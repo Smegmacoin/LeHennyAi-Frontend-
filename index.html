@@ -5,16 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LeHennyAI</title>
     <style>
-        /* Apply the background image */
+        /* Background image */
         body {
             margin: 0;
             font-family: Arial, sans-serif;
             background: url('lebron_hennessy_background.png') repeat;
-            background-size: cover; /* Ensures the image covers the screen */
+            background-size: cover;
             height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
+            overflow: hidden;
         }
 
         #container {
@@ -23,21 +24,23 @@
             height: 100%;
         }
 
+        /* LeBron PNG */
         #lebron {
             position: absolute;
             bottom: 0;
             left: 20px;
-            width: 300px; /* Adjust to make it prominent */
+            width: 400px; /* Enlarged */
             z-index: 1;
         }
 
+        /* Thought bubble */
         #thought-bubble {
             position: absolute;
-            bottom: 150px;
-            left: 180px;
-            width: 350px;
+            top: 50px; /* Moved to top of LeBron's head */
+            left: 150px; /* Centered horizontally above LeBron */
+            width: 400px; /* Increased width */
             padding: 20px;
-            background: rgba(255, 255, 255, 0.95); /* Solid with minimal transparency */
+            background: rgba(255, 255, 255, 0.95); /* Minimal transparency */
             border-radius: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             z-index: 2;
@@ -47,7 +50,8 @@
             content: "";
             position: absolute;
             bottom: -20px;
-            left: 20px;
+            left: 50%;
+            transform: translateX(-50%);
             width: 40px;
             height: 40px;
             background: rgba(255, 255, 255, 0.95);
@@ -58,7 +62,8 @@
             content: "";
             position: absolute;
             bottom: -50px;
-            left: 0px;
+            left: 50%;
+            transform: translateX(-50%);
             width: 20px;
             height: 20px;
             background: rgba(255, 255, 255, 0.95);
@@ -69,7 +74,7 @@
             height: 200px;
             overflow-y: auto;
             margin-bottom: 10px;
-            color: #333; /* Dark text for readability */
+            color: #333;
         }
 
         #chat-input-container {
@@ -118,4 +123,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-<!-- Forcing a rebuild by adding this comment -->
